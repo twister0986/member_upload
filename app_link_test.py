@@ -1771,8 +1771,8 @@ GITHUB_URL = ["https://github.com/twister0986/member_upload/raw/main/member_data
               "https://github.com/twister0986/member_upload/raw/main/member_carrier_v3_lite.zip"]
 
 # 定義下載和解壓的路徑
-zip_path = ["member_data_v3.zip","member_carrier_v3_lite.zip"]
-db_path = ["member_data_v3.db","member_carrier_v3_lite.db"]
+zip_path = ["member_data_v3.zip","member_carrier_v3.zip"]
+db_path = ["member_data_v3.db","member_carrier_v3.db"]
 
 # 檢查是否已經存在解壓縮的資料庫檔案
 for index in range(2):
