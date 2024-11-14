@@ -1768,7 +1768,7 @@ if 'lock7' not in st.session_state:
 #----------------------------------------------------------------
 # 定義資料庫壓縮檔的 GitHub URL
 GITHUB_URL = ["https://github.com/twister0986/member_upload/raw/main/member_data_v3.zip",
-              "https://github.com/twister0986/member_upload/raw/main/member_carrier_v3_lite.zip"]
+              "https://github.com/twister0986/member_upload/raw/main/member_carrier_v3.zip"]
 
 # 定義下載和解壓的路徑
 zip_path = ["member_data_v3.zip","member_carrier_v3.zip"]
