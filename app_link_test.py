@@ -7,6 +7,7 @@ import pandas as pd
 import random
 import plotly.express as px
 import plotly.graph_objects as go 
+from collections import Counter
 
 def member_question():
     
