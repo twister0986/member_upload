@@ -1775,20 +1775,36 @@ zip_path = ["member_data_v3.zip","member_carrier_v3.zip"]
 db_path = ["member_data_v3.db","member_carrier_v3.db"]
 
 # 檢查是否已經存在解壓縮的資料庫檔案
-for index in range(2):
-    if not os.path.exists(db_path[index]):
-        # 從 GitHub 下載壓縮檔
-        with requests.get(GITHUB_URL[index], stream=True) as r:
-            with open(zip_path[index], "wb") as f:
-                for chunk in r.iter_content(chunk_size=8192):
-                    f.write(chunk)
+
+if not os.path.exists(db_path[0]):
+    # 從 GitHub 下載壓縮檔
+    with requests.get(GITHUB_URL[0], stream=True) as r:
+        with open(zip_path[0], "wb") as f:
+            for chunk in r.iter_content(chunk_size=8192):
+                f.write(chunk)
+
+    # 解壓縮檔案
+    with zipfile.ZipFile(zip_path[0], 'r') as zip_ref:
+        zip_ref.extractall()
+
+    # 移除壓縮檔
+    os.remove(zip_path[0])
     
-        # 解壓縮檔案
-        with zipfile.ZipFile(zip_path[index], 'r') as zip_ref:
-            zip_ref.extractall()
     
-        # 移除壓縮檔
-        os.remove(zip_path[index])
+    
+if not os.path.exists(db_path[1]):
+    # 從 GitHub 下載壓縮檔
+    with requests.get(GITHUB_URL[1], stream=True) as r:
+        with open(zip_path[1], "wb") as f:
+            for chunk in r.iter_content(chunk_size=8192):
+                f.write(chunk)
+
+    # 解壓縮檔案
+    with zipfile.ZipFile(zip_path[1], 'r') as zip_ref:
+        zip_ref.extractall()
+
+    # 移除壓縮檔
+    os.remove(zip_path[1])
 #----------------------------------------------------------------
 
 #介面放寬
