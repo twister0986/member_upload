@@ -1654,7 +1654,7 @@ def member_carrier():
     
     
     # 連接到另一個載具 SQLite 資料庫
-    conn = sqlite3.connect('member_carrier_v3.db')
+    conn = sqlite3.connect('member_carrier_v3_lite.db')
     cursor = conn.cursor()
     
     area_name=['台北市','台南市','高雄市','新北市','桃園市',
